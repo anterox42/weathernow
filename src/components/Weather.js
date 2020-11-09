@@ -52,7 +52,7 @@ const Weather = () => {
     <div>
       <p style={{textAlign: "center", marginTop: "30vh"}}>
         <img
-        src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+        src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
         alt={weather}
         />
       </p>
