@@ -26,14 +26,14 @@ const Weather = () => {
     // Getting weather from api
     if (lat != null && lon != null) {
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${KEY}`
       )
         .then((response) => {
           return response.json();
         })
         .then((data) => {
           console.log(data);
-          setTemp(data.main.temp);
+          setTemp(Math.floor(data.main.temp));
           setCity(data.name);
           setWeather(data.weather[0].main);
           setIcon(data.weather[0].icon);
